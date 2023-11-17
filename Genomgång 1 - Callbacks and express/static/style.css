@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    background: black;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    height: 1px;
+    border-color: green;
+    background-color: green;
+}
+
+.code-wrapper {
+    display: flex;
+    justify-content: center;
+}
+  
+.code-wrapper pre {
+    text-align: left;
+    height: 50%;
+    min-width: 62%;
+    overflow: auto;
+    background: #171717;
+    font-size: 110%;
+    border-radius: 20px;
+    padding: 5px;
+    border: 3px solid #999999;
+}
+
+.section-text {
+    text-align: left;
+    font-size: 20px;
+    margin: 20px 20px 20px 20px;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 180%;
+    margin: 5px 5px 5px 8px;
+}
+
+nav {
+    font-size: 150%;
+    max-width: 1500px;
+}
+
+a, .a1 {
+    color: lightgreen;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+    text-shadow: 2px 2px 1px darkgreen;
+}
+
+.a1 {
+    float:left;
+    margin-left: 14%;
+    font-size: 100%;
+}
+
+.a3 {    
+    float:right;
+    margin-right: 10%;
+}
+
+button {
+    font-size: 150%;
+    color: lightgreen;
+    background:#242424;
+    margin-bottom: 10%;
+}
+
+img {
+    max-width: 80%;
+}
+
+
+.sidenav {
+    background-color: #111;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .sidenav a {
+      color: #ffffff;
+    }
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 36px;
+}

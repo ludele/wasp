@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Linux Experience</title>
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <link type="text/css" href="./lightbox2/css/lightbox.css" rel="stylesheet">
+    <script src="script-side-nav.js" defer></script>
+    <script src="./lightbox2/js/lightbox-plus-jquery.js" defer></script>
+  </head>
+  <body>
+    <div id="sidenavId" class="sidenav">
+      <a href="#" class="closebtn" onclick="toggleSideNav()">&times;</a>
+      <a href="info.html">What is Linux</a>
+      <a href="experience.html">Personal Experience</a>
+    </div>
+    <hr>
+    <header>
+      <nav>
+        <a class="a1" href="#" onclick="toggleSideNav()">&#9776;</a>
+        <a class="a2" href="index.html">Home</a>
+        <a class="a3" href="about.html">About</a>
+      </nav>
+    </header>
+    <hr>
+    <main>
+	    <h1 class="section-title">My Journey</h1>
+        <div class="section-text">
+         <p>
+            My experience with Linux has definitely been a mixed experience.
+            I started using Linux as my main operating system about three years ago. 
+            In the start i found Linux to be quite complex and had problems understanding it.
+            But over time i learned more and became more comfortable with it.
+         </p>
+         <p>
+            After a while i hit a point where I had learned more than what was strictly necessary.
+            Despite that, this learning phase allowed me to gain a deeper understanding of Linux.
+         </p> 
+         <p>
+            Looking back, my journey with Linux has been filled with initial confusion and subsequent growth.
+            It has been a rewarding experience that has shaped my perspective on operating 
+            systems and provided me with valuable knowledge and skills.
+         </p>
+        </div>
+
+         <a href="./images/dwm.webp" data-lightbox="linux" data-title="This is my personalised setup of the window manager dwm">
+          <img src="./images/dwm-mini.webp"
+          alt="A picture of my desktop using a the window manager i3,
+          having 3 terminal windows open showing the code of 3 files using the text editor vim">
+         </a>
+
+         <p class="section-text">
+            The image above showcases my Linux setup using dwm, a lightweight window manager for unix-like
+            operating systems, The name itself is somewhat ironic, as it shares the same name as 
+            the window managerused in the Windows. dwm has been my window manager of choice for a long time,
+            offering speed and limitless customizion. This of course has the catch that
+            dwm can be quite complex due to its require ment of editing the source code. The reason for this is that
+            the developers prioritize code minimalism. But despite its complexities,
+            dwm remains a stable tool that has worked for me and my workflow.
+         </p>
+         <p class="section-text centered-text">
+          In the image I showed multiple scripts, below is one of those:
+         </p>
+         <div class="code-wrapper">
+          <pre>
+            <code>
+    cd ~/hdd/Music
+    cd ~/hdd/Music/"\
+    `for folder in *
+      do echo "$folder"
+    done | fzf --height 60%
+    `"
+    
+    for song in *
+      do echo "$song"
+    done\
+      | fzf --height 99%\
+      | sed 's/\\/\\\\/'\
+      | sed "s/'/\'/g"\
+      | xargs -I{} mpv "{}" 
+            </code>
+          </pre>
+         </div>
+         <p class="section-text">
+          The above script is a test script I made to play music, what it does
+          is that it first selects a folder then plays a song inside the folder.
+         </p>
+         <a href="./images/rubyxsr.webp" data-lightbox="linux" data-title="This the output of a script i use with my dwm setup">
+          <img src="./images/rubyxsr.webp"
+          alt='Image shows the output of a script showing:
+          "volume, network speed (up and down), cpu temperature, memory usage, the current time'>
+         </a>
+
+          <p class="section-text">
+            The above image shows the output of one script I've made, this script is something i used along
+            side dwm since dwm doesn't have a inbuild status bar so I made one myself, the reality is that
+            I didn't have to but I did it for the learning experience.
+          </p>
+
+         <a href="./images/i3.webp" data-lightbox="linux" data-title="My customization for the i3 window manager">
+          <img src="./images/i3-mini.webp"
+          alt="A picture of my desktop using a the window manager i3,
+          having 4 terminal windows open showing the code of 3 files using the text editor vim, and 1 terminal
+          using a command to change the background to gray">
+         </a>
+
+         <p class="section-text">
+            In my Linux journey, I came across the i3 window manager, which I decided to try out.
+            My initial impression of i3 was a bit confusing since it can be quite complex. 
+            However, as I delved deeper into the world of window managers, particularly when 
+            I encountered dwm later on, I realized that i3 is relatively simpler in comparison.
+            Despite its initial learning curve, i3 proved to be more approachable and user-friendly
+            compared to the intricacies of dwm. Personality I think i3 is a very good window manager
+            to beginners but for absolute beginners it could still be a hassle.
+         </p>
+
+         <a href="./images/ubuntu-kde.webp" data-lightbox="linux" data-title="This is a simple desktop using the Kde Plasma desktop environment">
+          <img src="./images/ubuntu-kde-mini.webp"
+          alt="A screenshot of the kde plasma desktop enviroment that can be used on many unix-like operating systems">
+         </a>
+          
+         <p class="section-text">
+          The KDE desktop environment is something I've used occasionally during my time with Linux. 
+          As a contrast to other window managers, plasma is a full desktop environment, making it 
+          more similar to how Windows functions. Personaly say it is one of the best desktop environments 
+          for Linux, suitable for both experienced users and beginners. While most people don't require complex 
+          tiling window managers and prefer a simple desktop, Plasma offers just that. However, for more
+          experienced users, Plasma is also highly customizable, providing extensive options for personalization.
+         </p>
+        <button onclick="window.location.href='./info.html';">What is Linux?</button> 
+    </main>
+  </body>
+</html>
