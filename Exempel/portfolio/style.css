@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: 400;
+}
+
+.container {
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr 6fr 4fr 2fr;
+	grid-template-rows: 1fr 2fr 1fr 1fr 2fr;
+	grid-template-areas: "one two two two"
+		"one three four five"
+		"one three six five"
+		"one seven six five"
+		"one seven eight five";
+
+	background-color: black;
+}
+
+.text-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	padding: 10px;
+
+	color: white;
+}
+
+.text-box h2 {
+	font-size: 30px;
+}
+
+.text-box a {
+	color: white;
+}
+
+.box {
+	overflow: hidden;
+}
+
+.box1 {
+	grid-area: one;
+	position: relative;
+
+	background-color: #034C3C;
+}
+
+#page-title {
+	position: absolute;
+	bottom: 10px;
+	right: -35px;
+	margin: 0;
+
+	color: #ffffff;
+	font-size: 100px;
+	writing-mode: tb;
+	text-orientation: sideways;
+
+	transform: rotate(180deg);
+}
+
+.box2 {
+	grid-area: two;
+
+	display: grid;
+	justify-content: end;
+
+	background-color: #A6A15E;
+}
+
+.navbar {
+	height: 100%;
+	margin: 0;
+	margin-right: 30px;
+
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+
+	list-style: none;
+
+	font-family: 'Bebas Neue', sans-serif;
+}
+
+.navbar li {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	transition-duration: 0.3s;
+}
+
+.navbar li a {
+	font-size: 40px;
+	color: white;
+	text-decoration: none;
+}
+
+.navbar li:hover {
+	background-color: #84894A;
+}
+
+.box3 {
+	grid-area: three;
+
+	background-color: #243010;
+}
+
+.box4 {
+	grid-area: four;
+
+	background-image: url('media/mountain.png');
+	background-size: cover;
+	background-position: center center;
+}
+
+.box5 {
+	grid-area: five;
+
+	background-image: url('media/portrait.png');
+	background-size: cover;
+	background-position: center center;
+}
+
+.box6 {
+	grid-area: six;
+
+	background-color: #93032E;
+
+	/* background-color: magenta; */
+}
+
+.box7 {
+	grid-area: seven;
+	
+	background-image: url('media/reptile.png');
+	background-size: cover;
+	background-position: center center;
+	/* background-color: green; */
+}
+
+.box8 {
+	grid-area: eight;
+
+	/* background-color: #C69F89; */
+	background-image: url('media/woman.png');
+	background-size: cover;
+	background-position: center center;
+}

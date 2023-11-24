@@ -4,7 +4,7 @@ const path = require('path');
 const { promisify } = require('util');
 const url = require('url');
 
-const port = 25565;
+const port = 3000;
 
 const routes = {};
 
@@ -12,7 +12,7 @@ function get(path, greetText = 'Hej') {
     routes[path] = { greetText };
 }
 
-function handleRequest(req, res) {
+function handleRequest(req, res, value) {
     const parsedUrl = url.parse(req.url, true);
     const route = routes[parsedUrl.pathname];
 
@@ -21,9 +21,7 @@ function handleRequest(req, res) {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end(greetText);
     } else {
-        // Serve dynamic HTML for any other route
-        const dynamicValue = 'This is a dynamic value!';
-        serveDynamicHtml(res, dynamicValue);
+        serveDynamicHtml(res, value);
     }
 }
 
@@ -39,7 +37,7 @@ function serveDynamicHtml(res, dynamicValue) {
         </head>
         <body>
             <h1>${dynamicValue}</h1>
-        </body>
+        </body
         </html>
     `;
 
@@ -48,7 +46,7 @@ function serveDynamicHtml(res, dynamicValue) {
 }
 
 const server = http.createServer((req, res) => {
-    handleRequest(req, res);
+    handleRequest(req, res, "Hello, World!");
 });
 
 const listenAsync = promisify(server.listen).bind(server);
